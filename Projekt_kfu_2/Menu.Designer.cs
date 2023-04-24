@@ -71,6 +71,7 @@
             this.buttonInformation.TabIndex = 1;
             this.buttonInformation.Text = "О приложении";
             this.buttonInformation.UseVisualStyleBackColor = true;
+            this.buttonInformation.Click += new System.EventHandler(this.buttonInformation_Click);
             // 
             // MenuL
             // 

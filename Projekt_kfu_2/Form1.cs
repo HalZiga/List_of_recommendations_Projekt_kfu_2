@@ -27,11 +27,11 @@ namespace Projekt_kfu_2
         private void Form1_Load(object sender, EventArgs e)
         {
             User user = new User();
+            user.userr = user;
             user.Show();
-            textBoxName.Text = "Имя";
-            textBoxName.ForeColor = Color.Gray;
-            textBoxSurname.Text = "Фамилия";
-            textBoxSurname.ForeColor = Color.Gray;
+
+            textBoxLogin.Text = "Логин";
+            textBoxLogin.ForeColor = Color.Gray;
             textBoxPassword.Text = "Пароль";
             textBoxPassword.ForeColor = Color.Gray;
             textBoxPassword.PasswordChar = '*';
@@ -50,39 +50,22 @@ namespace Projekt_kfu_2
 
         private void textBoxName_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBoxName.Text))
+            if (string.IsNullOrWhiteSpace(textBoxLogin.Text))
             {
-                textBoxName.Text = "Имя";
-                textBoxName.ForeColor = Color.Gray;
+                textBoxLogin.Text = "Логин";
+                textBoxLogin.ForeColor = Color.Gray;
             }
         }
 
         private void textBoxName_Enter(object sender, EventArgs e)
         {
-            if (textBoxName.Text == "Имя")
+            if (textBoxLogin.Text == "Логин")
             {
-                textBoxName.Text = "";
-                textBoxName.ForeColor = Color.Black;
+                textBoxLogin.Text = "";
+                textBoxLogin.ForeColor = Color.Black;
             }
         }
 
-        private void textBoxSurname_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBoxSurname.Text))
-            {
-                textBoxSurname.Text = "Фамилия";
-                textBoxSurname.ForeColor = Color.Gray;
-            }
-        }
-
-        private void textBoxSurname_Enter(object sender, EventArgs e)
-        {
-            if (textBoxSurname.Text == "Фамилия")
-            {
-                textBoxSurname.Text = "";
-                textBoxSurname.ForeColor = Color.Black;
-            }
-        }
 
         private void textBoxPassword_Leave(object sender, EventArgs e)
         {
@@ -138,26 +121,26 @@ namespace Projekt_kfu_2
 
         private void buttonEntrance_Click(object sender, EventArgs e)
         {
-            /*
-            DB db = new DB();
+            Class_for_db.Connect();
+            Class_for_db.openconnection();
+
             // Получаем данные от пользователя
-            String loginUser = loginField.Text;
-            String passUser = passField.Text;
-            name_user = loginUser;
-            db.openConnection();
+            String loginUser = textBoxLogin.Text;
+            String passUser = textBoxPassword.Text;
+
+
             try
             {
-                var uncid = "121212"; // Пользовательский код
-                var unicEng = "140408";
-                var unicAdm = "080414";
-                var name = new SqlCommand($"select max(Name) from users where login = '{loginUser}' ;", db.getConnection());
-                var Lastname = new SqlCommand($"select max(LastName) from users where login = '{loginUser}' ;", db.getConnection());
-                var email = new SqlCommand($"select max(email) from users where login = '{loginUser}' ;", db.getConnection());
-                var unic_id = new SqlCommand($"select max(unic_id) from users where login = '{loginUser}' ;", db.getConnection());
-                var user_id = new SqlCommand($"select max(user_id) from users where login = '{loginUser}' ;", db.getConnection());
+
+                var name = new SqlCommand($"select max(Name) from Table where UserId = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+                var surname = new SqlCommand($"select max(Surname) from Table where UserId = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+                var Lastname = new SqlCommand($"select max(LastName) Table users where login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+                var email = new SqlCommand($"select max(Email) from Table where login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+                var user_id = new SqlCommand($"select max(UserId) from Table where login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+
                 var userr_id = (int)user_id.ExecuteScalar();
-                var unic_idd = (string)unic_id.ExecuteScalar();
                 var namme = (string)name.ExecuteScalar();
+                var surnamme = (string)surname.ExecuteScalar();
                 var LastNamee = (string)Lastname.ExecuteScalar();
                 var emaiil = (string)email.ExecuteScalar();
                 //Создаем обьект класса нашей базы данных
@@ -169,32 +152,20 @@ namespace Projekt_kfu_2
                 var log = loginUser;
                 var pas = passUser;
 
-                SqlCommand cmd = new SqlCommand($"select count(*) from users where login = '{log}' and password = '{pas}'", db.getConnection());
-                db.openConnection();
+                SqlCommand cmd = new SqlCommand($"select count(*) from users where login = '{log}' and password = '{pas}'", Class_for_db.UserSqlConnection());
+
                 int count = (int)cmd.ExecuteScalar();
-                if (count > 0 && unic_idd == uncid)
+                if (count > 0)
                 {
                     this.Hide();
-                    var val = new FormUser(namme, loginUser, emaiil, LastNamee, userr_id, unic_idd);
-                    val.ShowDialog();
-                }
-                else if (count > 0 && unic_idd == unicEng)
-                {
-                    this.Hide();
-                    var val = new FormEngineer2(namme, loginUser, emaiil, LastNamee, userr_id, unic_idd);
-                    val.ShowDialog();
-                }
-                else if (count > 0 && unic_idd == unicAdm)
-                {
-                    this.Hide();
-                    var val = new AdminForm(namme, loginUser, emaiil, LastNamee, userr_id, unic_idd);
-                    val.ShowDialog();
+                    //var val = new FormUser(namme, loginUser, emaiil, LastNamee, userr_id, unic_idd);
+                    //val.ShowDialog();
                 }
                 else { MessageBox.Show("Введенные данные неверны"); }
             }
             catch { MessageBox.Show("Возникла ошибка"); }
-            db.closeConnection();*/
-            
+            Class_for_db.closeconnection();
+
         }
     }
     

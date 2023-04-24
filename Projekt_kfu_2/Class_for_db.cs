@@ -37,9 +37,9 @@ namespace Projekt_kfu_2
             }
         }
 
-        public static int AddUser(string name, string surname, string lastName, string email, string password)
+        public static int AddUser(string name, string surname, string lastName, string email, string password, string login)
         {
-            SqlCommand command = new SqlCommand($"INSERT INTO [Table] (Name, Surname, LastName, Email, Password) VALUES (N'{name}',N'{surname}',N'{lastName}', '{email}', '{password}')", SqlConnection_connection);
+            SqlCommand command = new SqlCommand($"INSERT INTO [Table] (Name, Surname, LastName, Email, Password, Login) VALUES (N'{name}',N'{surname}',N'{lastName}', '{email}', '{password}', '{login}')", SqlConnection_connection);
             int A = command.ExecuteNonQuery();
             MessageBox.Show($"{A}");
             return A;
@@ -58,23 +58,50 @@ namespace Projekt_kfu_2
             //создали адаптер котор будет выполнять наши запросы в будущем
             SqlDataAdapter adapter = new SqlDataAdapter();
 
-            SqlCommand command = new SqlCommand($"select Name, Surname, LastName from [Table] where Name LIKE  N'{name}' AND Surname LIKE N'{surname}' AND LastName LIKE N'{lastName}'", SqlConnection_connection);
+            SqlCommand command = new SqlCommand($"select UserId Name, Surname, LastName from [Table] where Name LIKE  N'{name}' AND Surname LIKE N'{surname}' AND LastName LIKE N'{lastName}'", SqlConnection_connection);
 
             //Выбрали и выполнили нужную команду
             adapter.SelectCommand = command;
 
             //Помещаем в table
             adapter.Fill(table);
+            var ID = table.Rows[0].ItemArray[0];
 
             //Проверка на существование пользователя
             if (table.Rows.Count > 0)
             {
                 MessageBox.Show("Такой пользователь уже существует");
+                
                 return true;
             }
             else { return false; }
         }
+        /*public static int UserId(string name, string surname, string lastName) в итоге не нужен, но способ для считывания конкретного значения пусть останется
+        {
+            if (lastName.Equals("Отчество(если имеется)"))
+            {
+                lastName = "";
+            }
+            DataTable table = new DataTable();
 
+            //создали адаптер котор будет выполнять наши запросы в будущем
+            SqlDataAdapter adapter = new SqlDataAdapter();
 
+            SqlCommand command = new SqlCommand($"select UserId Name, Surname, LastName from [Table] where Name LIKE  N'{name}' AND Surname LIKE N'{surname}' AND LastName LIKE N'{lastName}'", SqlConnection_connection);
+
+            //Выбрали и выполнили нужную команду
+            adapter.SelectCommand = command;
+
+            //Помещаем в table
+            adapter.Fill(table);
+            var ID = table.Rows[0].ItemArray[0];
+
+            return (int)ID;
+        }*/
+        public static SqlConnection UserSqlConnection()
+        {
+            return SqlConnection_connection;
+
+        }
     }
 }

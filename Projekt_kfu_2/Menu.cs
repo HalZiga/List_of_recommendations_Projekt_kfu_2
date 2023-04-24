@@ -14,17 +14,23 @@ namespace Projekt_kfu_2
     public partial class MenuL : Form
     {
         static MenuL menu = null;
+        private User user1 = new User();
 
         private MenuL()
         {
             InitializeComponent();
         }
+        private MenuL(User user)
+        {
+            InitializeComponent();
+            user1 = user;
+        }
 
-        public static MenuL Getinstatnce() 
+        public static MenuL Getinstatnce(User user) 
         {
             if (menu == null) 
             {
-               menu = new MenuL();
+               menu = new MenuL(user);
             }
             return menu;
 
@@ -49,5 +55,11 @@ namespace Projekt_kfu_2
         {
 
         }
+
+        private void buttonInformation_Click(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

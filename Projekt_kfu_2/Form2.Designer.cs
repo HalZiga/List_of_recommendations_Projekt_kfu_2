@@ -36,6 +36,7 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxSurename = new System.Windows.Forms.TextBox();
             this.textBoxFathername = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonRegestration
@@ -75,7 +76,7 @@
             // 
             // textBoxPasswod
             // 
-            this.textBoxPasswod.Location = new System.Drawing.Point(55, 132);
+            this.textBoxPasswod.Location = new System.Drawing.Point(55, 190);
             this.textBoxPasswod.Multiline = true;
             this.textBoxPasswod.Name = "textBoxPasswod";
             this.textBoxPasswod.Size = new System.Drawing.Size(236, 32);
@@ -85,7 +86,7 @@
             // 
             // textBoxSecondPassword
             // 
-            this.textBoxSecondPassword.Location = new System.Drawing.Point(55, 191);
+            this.textBoxSecondPassword.Location = new System.Drawing.Point(55, 228);
             this.textBoxSecondPassword.Multiline = true;
             this.textBoxSecondPassword.Name = "textBoxSecondPassword";
             this.textBoxSecondPassword.Size = new System.Drawing.Size(236, 32);
@@ -95,7 +96,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(55, 245);
+            this.textBoxName.Location = new System.Drawing.Point(55, 266);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(236, 32);
@@ -105,7 +106,7 @@
             // 
             // textBoxSurename
             // 
-            this.textBoxSurename.Location = new System.Drawing.Point(55, 292);
+            this.textBoxSurename.Location = new System.Drawing.Point(55, 304);
             this.textBoxSurename.Multiline = true;
             this.textBoxSurename.Name = "textBoxSurename";
             this.textBoxSurename.Size = new System.Drawing.Size(236, 32);
@@ -123,12 +124,23 @@
             this.textBoxFathername.Enter += new System.EventHandler(this.textBoxFathername_Enter);
             this.textBoxFathername.Leave += new System.EventHandler(this.textBoxFathername_Leave);
             // 
+            // textBoxLogin
+            // 
+            this.textBoxLogin.Location = new System.Drawing.Point(55, 140);
+            this.textBoxLogin.Multiline = true;
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(236, 32);
+            this.textBoxLogin.TabIndex = 10;
+            this.textBoxLogin.Enter += new System.EventHandler(this.textBoxLogin_Enter);
+            this.textBoxLogin.Leave += new System.EventHandler(this.textBoxLogin_Leave);
+            // 
             // Regestration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(359, 450);
+            this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.textBoxFathername);
             this.Controls.Add(this.textBoxSurename);
             this.Controls.Add(this.textBoxName);
@@ -138,7 +150,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRegestration);
             this.Name = "Regestration";
-            this.Text = "Regestration";
             this.Load += new System.EventHandler(this.Regestration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -154,5 +165,6 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxSurename;
         private System.Windows.Forms.TextBox textBoxFathername;
+        private System.Windows.Forms.TextBox textBoxLogin;
     }
 }

@@ -31,8 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonEntrance = new System.Windows.Forms.Button();
             this.buttonRegestration = new System.Windows.Forms.Button();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxSurname = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.pictureBoxVisible = new System.Windows.Forms.PictureBox();
             this.pictureBoxHide = new System.Windows.Forms.PictureBox();
@@ -81,31 +80,18 @@
             this.buttonRegestration.UseVisualStyleBackColor = false;
             this.buttonRegestration.Click += new System.EventHandler(this.buttonRegestration_Click);
             // 
-            // textBoxName
+            // textBoxLogin
             // 
-            this.textBoxName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxName.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxName.Location = new System.Drawing.Point(86, 146);
-            this.textBoxName.Multiline = true;
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(238, 35);
-            this.textBoxName.TabIndex = 3;
-            this.textBoxName.Enter += new System.EventHandler(this.textBoxName_Enter);
-            this.textBoxName.Leave += new System.EventHandler(this.textBoxName_Leave);
-            // 
-            // textBoxSurname
-            // 
-            this.textBoxSurname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBoxSurname.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBoxSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSurname.Location = new System.Drawing.Point(86, 196);
-            this.textBoxSurname.Multiline = true;
-            this.textBoxSurname.Name = "textBoxSurname";
-            this.textBoxSurname.Size = new System.Drawing.Size(238, 35);
-            this.textBoxSurname.TabIndex = 4;
-            this.textBoxSurname.Enter += new System.EventHandler(this.textBoxSurname_Enter);
-            this.textBoxSurname.Leave += new System.EventHandler(this.textBoxSurname_Leave);
+            this.textBoxLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxLogin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLogin.Location = new System.Drawing.Point(86, 146);
+            this.textBoxLogin.Multiline = true;
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(238, 35);
+            this.textBoxLogin.TabIndex = 3;
+            this.textBoxLogin.Enter += new System.EventHandler(this.textBoxName_Enter);
+            this.textBoxLogin.Leave += new System.EventHandler(this.textBoxName_Leave);
             // 
             // textBoxPassword
             // 
@@ -150,8 +136,7 @@
             this.ClientSize = new System.Drawing.Size(403, 430);
             this.Controls.Add(this.pictureBoxHide);
             this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.textBoxSurname);
-            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.buttonRegestration);
             this.Controls.Add(this.buttonEntrance);
             this.Controls.Add(this.label1);
@@ -173,8 +158,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonEntrance;
         private System.Windows.Forms.Button buttonRegestration;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxSurname;
+        private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.PictureBox pictureBoxHide;
         private System.Windows.Forms.PictureBox pictureBoxVisible;

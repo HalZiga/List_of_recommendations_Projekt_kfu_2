@@ -12,7 +12,6 @@ namespace Projekt_kfu_2
 {
     public partial class InputDialog : Form
     {
-        private TextBox TextBox1;
         public bool Flag = false;
 
         public string InputText { get; private set; }
@@ -25,7 +24,7 @@ namespace Projekt_kfu_2
         private void buttonOk_Click(object sender, EventArgs e)
         {
             InputText = textBox1.Text;
-            if (InputText == "ILDHALADE")
+            if (InputText == "836852")
             {
                 IsOkClicked = true;
                 Flag = true;
@@ -47,9 +46,5 @@ namespace Projekt_kfu_2
             Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

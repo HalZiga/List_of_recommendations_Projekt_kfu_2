@@ -15,7 +15,7 @@ namespace Projekt_kfu_2
 {
     public partial class Regestration : Form
     {
-        private bool exReg;
+    
         public Regestration()
         {
             InitializeComponent();
@@ -27,6 +27,8 @@ namespace Projekt_kfu_2
             textBoxEmail.ForeColor = Color.Gray;
             textBoxPasswod.Text = "Пароль";
             textBoxPasswod.ForeColor = Color.Gray;
+            textBoxLogin.Text = "Логин";
+            textBoxLogin.ForeColor = Color.Gray;
             textBoxSecondPassword.Text = "Повторите пароль";
             textBoxSecondPassword.ForeColor = Color.Gray;
             textBoxName.Text = "Имя";
@@ -50,7 +52,7 @@ namespace Projekt_kfu_2
 
         private void textBoxEmail_Enter(object sender, EventArgs e)
         {
-            if (textBoxEmail.Text.Equals("Email"))
+            if (textBoxEmail.Text == "Email")
             {
                 textBoxEmail.Text = "";
                 textBoxEmail.ForeColor = Color.Black;
@@ -168,12 +170,12 @@ namespace Projekt_kfu_2
                 var email = textBoxEmail.Text;
                 var lastName = textBoxFathername.Text;
                 var Surname = textBoxSurename.Text;
+                var login = textBoxLogin.Text;
                 if (textBoxFathername.Text.Equals("Отчество(если имеется)"))
                 {
                     lastName = "";
                 }
-                //var un = new SqlCommand("select max(user_id) from users;", db.getConnection());
-                //var userid = (Int32)un.ExecuteScalar() + 1;
+
                 try
                 {
                     ClassMailPassword messageCode = new ClassMailPassword(email);
@@ -185,10 +187,10 @@ namespace Projekt_kfu_2
                     if (inputDialog.Flag == true)
                     {
                         
-                        if (Class_for_db.AddUser(Name, Surname, lastName, email, pass) == 1)
+                        if (Class_for_db.AddUser(Name, Surname, lastName, email, pass, login) == 1)
                         {
                             MessageBox.Show("Регистрация успешно завершена");
-                            exReg = true;
+
                         }
                         else { MessageBox.Show("Что-то пошло не так.."); }
 
@@ -209,6 +211,24 @@ namespace Projekt_kfu_2
 
             
 
+        }
+
+        private void textBoxLogin_Enter(object sender, EventArgs e)
+        {
+            if (textBoxLogin.Text.Equals("Логин"))
+            {
+                textBoxLogin.Text = "";
+                textBoxLogin.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxLogin_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxLogin.Text))
+            {
+                textBoxLogin.Text = "Логин";
+                textBoxLogin.ForeColor = Color.Gray;
+            }
         }
 
     }
