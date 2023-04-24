@@ -31,7 +31,6 @@
             this.buttonRegestration = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPasswod = new System.Windows.Forms.TextBox();
             this.textBoxSecondPassword = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.buttonRegestration.TabIndex = 1;
             this.buttonRegestration.Text = "Зарегистрироваться";
             this.buttonRegestration.UseVisualStyleBackColor = false;
+            this.buttonRegestration.Click += new System.EventHandler(this.buttonRegestration_Click);
             // 
             // label1
             // 
@@ -65,28 +65,17 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(55, 72);
+            this.textBoxEmail.Location = new System.Drawing.Point(55, 83);
             this.textBoxEmail.Multiline = true;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(236, 32);
             this.textBoxEmail.TabIndex = 3;
-            this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             this.textBoxEmail.Enter += new System.EventHandler(this.textBoxEmail_Enter);
             this.textBoxEmail.Leave += new System.EventHandler(this.textBoxEmail_Leave);
             // 
-            // textBoxLogin
-            // 
-            this.textBoxLogin.Location = new System.Drawing.Point(55, 125);
-            this.textBoxLogin.Multiline = true;
-            this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(236, 32);
-            this.textBoxLogin.TabIndex = 4;
-            this.textBoxLogin.Enter += new System.EventHandler(this.textBoxLogin_Enter);
-            this.textBoxLogin.Leave += new System.EventHandler(this.textBoxLogin_Leave);
-            // 
             // textBoxPasswod
             // 
-            this.textBoxPasswod.Location = new System.Drawing.Point(55, 178);
+            this.textBoxPasswod.Location = new System.Drawing.Point(55, 132);
             this.textBoxPasswod.Multiline = true;
             this.textBoxPasswod.Name = "textBoxPasswod";
             this.textBoxPasswod.Size = new System.Drawing.Size(236, 32);
@@ -96,7 +85,7 @@
             // 
             // textBoxSecondPassword
             // 
-            this.textBoxSecondPassword.Location = new System.Drawing.Point(55, 216);
+            this.textBoxSecondPassword.Location = new System.Drawing.Point(55, 191);
             this.textBoxSecondPassword.Multiline = true;
             this.textBoxSecondPassword.Name = "textBoxSecondPassword";
             this.textBoxSecondPassword.Size = new System.Drawing.Size(236, 32);
@@ -106,7 +95,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(55, 254);
+            this.textBoxName.Location = new System.Drawing.Point(55, 245);
             this.textBoxName.Multiline = true;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(236, 32);
@@ -145,7 +134,6 @@
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.textBoxSecondPassword);
             this.Controls.Add(this.textBoxPasswod);
-            this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRegestration);
@@ -161,7 +149,6 @@
         private System.Windows.Forms.Button buttonRegestration;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxPasswod;
         private System.Windows.Forms.TextBox textBoxSecondPassword;
         private System.Windows.Forms.TextBox textBoxName;

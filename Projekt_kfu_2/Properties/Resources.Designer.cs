@@ -89,5 +89,15 @@ namespace Projekt_kfu_2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Menyu_ikonka {
+            get {
+                object obj = ResourceManager.GetObject("Menyu_ikonka", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

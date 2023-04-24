@@ -52,7 +52,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Авторизация";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonEntrance
             // 
@@ -66,7 +65,7 @@
             this.buttonEntrance.TabIndex = 1;
             this.buttonEntrance.Text = "Войти";
             this.buttonEntrance.UseVisualStyleBackColor = false;
-            this.buttonEntrance.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEntrance.Click += new System.EventHandler(this.buttonEntrance_Click);
             // 
             // buttonRegestration
             // 
@@ -92,7 +91,6 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(238, 35);
             this.textBoxName.TabIndex = 3;
-            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             this.textBoxName.Enter += new System.EventHandler(this.textBoxName_Enter);
             this.textBoxName.Leave += new System.EventHandler(this.textBoxName_Leave);
             // 
