@@ -129,41 +129,40 @@ namespace Projekt_kfu_2
             String passUser = textBoxPassword.Text;
 
 
-            try
+            
+
+            var name = new SqlCommand($"select max(Name) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+            var surname = new SqlCommand($"select max(Surname) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+            var Lastname = new SqlCommand($"select max(LastName) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+            var email = new SqlCommand($"select max(Email) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+            var user_id = new SqlCommand($"select max(UserId) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+
+            var userr_id = (int)user_id.ExecuteScalar();
+            var namme = (string)name.ExecuteScalar();
+            var surnamme = (string)surname.ExecuteScalar();
+            var LastNamee = (string)Lastname.ExecuteScalar();
+            var emaiil = (string)email.ExecuteScalar();
+            //Создаем обьект класса нашей базы данных
+
+            DataTable table = new DataTable();
+
+
+            //Команда которая должна выполнится для базы данных
+            var log = loginUser;
+            var pas = passUser;
+
+            SqlCommand cmd = new SqlCommand($"select count(*) from [Table] where login = '{log}' and password = '{pas}'", Class_for_db.UserSqlConnection());
+
+            int count = (int)cmd.ExecuteScalar();
+            if (count > 0)
             {
-
-                var name = new SqlCommand($"select max(Name) from Table where UserId = '{loginUser}' ;", Class_for_db.UserSqlConnection());
-                var surname = new SqlCommand($"select max(Surname) from Table where UserId = '{loginUser}' ;", Class_for_db.UserSqlConnection());
-                var Lastname = new SqlCommand($"select max(LastName) Table users where login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
-                var email = new SqlCommand($"select max(Email) from Table where login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
-                var user_id = new SqlCommand($"select max(UserId) from Table where login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
-
-                var userr_id = (int)user_id.ExecuteScalar();
-                var namme = (string)name.ExecuteScalar();
-                var surnamme = (string)surname.ExecuteScalar();
-                var LastNamee = (string)Lastname.ExecuteScalar();
-                var emaiil = (string)email.ExecuteScalar();
-                //Создаем обьект класса нашей базы данных
-
-                DataTable table = new DataTable();
-
-
-                //Команда которая должна выполнится для базы данных
-                var log = loginUser;
-                var pas = passUser;
-
-                SqlCommand cmd = new SqlCommand($"select count(*) from users where login = '{log}' and password = '{pas}'", Class_for_db.UserSqlConnection());
-
-                int count = (int)cmd.ExecuteScalar();
-                if (count > 0)
-                {
-                    this.Hide();
-                    //var val = new FormUser(namme, loginUser, emaiil, LastNamee, userr_id, unic_idd);
-                    //val.ShowDialog();
-                }
-                else { MessageBox.Show("Введенные данные неверны"); }
+                this.Hide();
+                //var val = new FormUser(namme, loginUser, emaiil, LastNamee, userr_id, unic_idd);
+                //val.ShowDialog();
             }
-            catch { MessageBox.Show("Возникла ошибка"); }
+            else { MessageBox.Show("Введенные данные неверны"); }
+            
+            //catch { MessageBox.Show("Возникла ошибка"); }
             Class_for_db.closeconnection();
 
         }

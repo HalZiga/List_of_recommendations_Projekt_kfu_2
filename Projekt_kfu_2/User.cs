@@ -32,17 +32,18 @@ namespace Projekt_kfu_2
         {
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
 
-            buttonMenu.FlatAppearance.BorderSize = 0;
-            buttonMenu.FlatStyle = FlatStyle.Flat;
+            
 
             menuStrip1.Padding = new System.Windows.Forms.Padding(0);
 
+            //Таймер для входа
         }
 
         private void buttonMenu_Click(object sender, EventArgs e)
         {
-            Koord(this.Location);
-            Koord(buttonMenu.Location);
+            //Koord(this.Location);
+            //Koord(buttonMenu.Location); кучу времени потратил на правильную локацию обиндо просто убирать пусть останется вдруг в будущем нужен будет
+
 
             MenuL menuL = MenuL.Getinstatnce(userr);
             menuL.Location = User.pointMenu;
@@ -52,7 +53,7 @@ namespace Projekt_kfu_2
             pointMenu = new Point(0, 0);
 
         }
-        private void OpenChildForm(Form childform, object btnSender)//в идеале надо изменить на приват
+        private void OpenChildForm(Form childform, object btnSender)
         {
             if(activrForm != null)
             {
@@ -68,20 +69,45 @@ namespace Projekt_kfu_2
             childform.Show();
             //labelforForm.Text = childform.Text;
         }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void OpenChildForm(Form childform)
         {
-
+            if (activrForm != null)
+            {
+                activrForm.Close();
+            }
+            activrForm = childform;
+            childform.TopLevel = false;
+            childform.FormBorderStyle = FormBorderStyle.None;
+            childform.Dock = DockStyle.Fill;
+            this.panelDesktopPane.Controls.Add(childform);
+            this.panelDesktopPane.Tag = childform;
+            childform.BringToFront();
+            childform.Show();
+            //labelforForm.Text = childform.Text;
         }
 
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void информацияToolStripMenuItem1_Click(object sender, EventArgs e)
+
+
+        private void оПриложенииToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new FormProgrInfo(), sender);
+            labelforForm.Text = "О приложении";
+        }
+
+        private void регистрацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Regestration regestration = new Regestration();
+            regestration.Show();
+
+        }
+
+
+        private void предложениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Offers(), sender);
+            labelforForm.Text = "Предложения";
         }
     }
 }

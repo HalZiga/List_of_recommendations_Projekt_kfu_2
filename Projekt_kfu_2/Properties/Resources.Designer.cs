@@ -63,6 +63,26 @@ namespace Projekt_kfu_2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_plus_2549959_1 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-plus-2549959_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap free_icon_sofa_2146347 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-sofa-2146347", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_показать_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-показать-30", resourceCulture);
@@ -96,6 +116,26 @@ namespace Projekt_kfu_2.Properties {
         internal static System.Drawing.Bitmap Menyu_ikonka {
             get {
                 object obj = ResourceManager.GetObject("Menyu_ikonka", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zvezda1 {
+            get {
+                object obj = ResourceManager.GetObject("zvezda1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zvezda2 {
+            get {
+                object obj = ResourceManager.GetObject("zvezda2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

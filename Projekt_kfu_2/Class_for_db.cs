@@ -41,41 +41,38 @@ namespace Projekt_kfu_2
         {
             SqlCommand command = new SqlCommand($"INSERT INTO [Table] (Name, Surname, LastName, Email, Password, Login) VALUES (N'{name}',N'{surname}',N'{lastName}', '{email}', '{password}', '{login}')", SqlConnection_connection);
             int A = command.ExecuteNonQuery();
-            MessageBox.Show($"{A}");
             return A;
 
 
         }
 
-        public static Boolean UserExist(string name, string surname, string lastName)
+        public static Boolean UserExist(string login)
         {
-            if (lastName.Equals("Отчество(если имеется)"))
-            {
-                lastName = "";
-            }
             DataTable table = new DataTable();
 
             //создали адаптер котор будет выполнять наши запросы в будущем
             SqlDataAdapter adapter = new SqlDataAdapter();
 
-            SqlCommand command = new SqlCommand($"select UserId Name, Surname, LastName from [Table] where Name LIKE  N'{name}' AND Surname LIKE N'{surname}' AND LastName LIKE N'{lastName}'", SqlConnection_connection);
+            SqlCommand command = new SqlCommand($"select * from [Table] where Login LIKE  N'{login}' ", SqlConnection_connection);
 
             //Выбрали и выполнили нужную команду
             adapter.SelectCommand = command;
 
             //Помещаем в table
             adapter.Fill(table);
-            var ID = table.Rows[0].ItemArray[0];
+
 
             //Проверка на существование пользователя
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("Такой пользователь уже существует");
+                MessageBox.Show("Такой логин уже существует");
                 
                 return true;
             }
             else { return false; }
+
         }
+
         /*public static int UserId(string name, string surname, string lastName) в итоге не нужен, но способ для считывания конкретного значения пусть останется
         {
             if (lastName.Equals("Отчество(если имеется)"))

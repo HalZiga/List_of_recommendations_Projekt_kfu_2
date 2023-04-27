@@ -37,7 +37,12 @@ namespace Projekt_kfu_2
             textBoxSurename.ForeColor = Color.Gray;
             textBoxFathername.Text = "Отчество(если есть)";
             textBoxFathername.ForeColor = Color.Gray;
-            
+
+            int centerX = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
+            int centerY = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
+
+            this.Location = new Point(centerX, centerY);
+
         }
 
 
@@ -156,13 +161,13 @@ namespace Projekt_kfu_2
             Class_for_db.openconnection();
 
 
-            if (textBoxName.Text.Equals("Имя") || textBoxEmail.Text.Equals("Email") || textBoxPasswod.Text.Equals("Пароль") || textBoxSurename.Text.Equals("Фамилия") )
+            if (textBoxName.Text.Equals("Имя") || textBoxEmail.Text.Equals("Email") || textBoxPasswod.Text.Equals("Пароль") || textBoxSurename.Text.Equals("Фамилия") || textBoxLogin.Text.Equals("Логин"))
             {
                 MessageBox.Show("Введите все данные");
             }
 
-            if (Class_for_db.UserExist(textBoxName.Text, textBoxSurename.Text, textBoxFathername.Text)) { return; }
-            if (textBoxName.Text != "Имя" && textBoxEmail.Text != "Email" && textBoxPasswod.Text != "Пароль" && textBoxSurename.Text != "Фамилия" )
+            if (Class_for_db.UserExist(textBoxLogin.Text)) { return; }
+            if (textBoxName.Text != "Имя" && textBoxEmail.Text != "Email" && textBoxPasswod.Text != "Пароль" && textBoxSurename.Text != "Фамилия" && textBoxLogin.Text != "Логин")
             {
 
                 var pass = textBoxPasswod.Text;
@@ -190,6 +195,7 @@ namespace Projekt_kfu_2
                         if (Class_for_db.AddUser(Name, Surname, lastName, email, pass, login) == 1)
                         {
                             MessageBox.Show("Регистрация успешно завершена");
+                            this.Hide();
 
                         }
                         else { MessageBox.Show("Что-то пошло не так.."); }
@@ -201,7 +207,7 @@ namespace Projekt_kfu_2
                         {
                             MessageBox.Show("Проверьте введенные данные еще раз");
                         }
-                        if (Class_for_db.UserExist(textBoxName.Text, textBoxSurename.Text, textBoxFathername.Text)) { return; }
+                        if (Class_for_db.UserExist(textBoxLogin.Text)) { return; }
                     }
                 }
                 catch { MessageBox.Show("Данные о почте неверны"); }
@@ -212,6 +218,8 @@ namespace Projekt_kfu_2
             
 
         }
+
+        
 
         private void textBoxLogin_Enter(object sender, EventArgs e)
         {

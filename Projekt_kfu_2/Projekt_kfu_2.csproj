@@ -84,11 +84,23 @@
     <Compile Include="FormProgrInfo.Designer.cs">
       <DependentUpon>FormProgrInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Furniture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Furniture.Designer.cs">
+      <DependentUpon>Furniture.cs</DependentUpon>
+    </Compile>
     <Compile Include="InputDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InputDialog.Designer.cs">
       <DependentUpon>InputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListItem.Designer.cs">
+      <DependentUpon>ListItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Mail.cs" />
     <Compile Include="Menu.cs">
@@ -97,8 +109,28 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Offers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offers.Designer.cs">
+      <DependentUpon>Offers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OffersBase.cs" />
+    <Compile Include="Probnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Probnik.Designer.cs">
+      <DependentUpon>Probnik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistUser.Designer.cs">
+      <DependentUpon>RegistUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TouchScroll.cs" />
     <Compile Include="User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +146,23 @@
     <EmbeddedResource Include="FormProgrInfo.resx">
       <DependentUpon>FormProgrInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Furniture.resx">
+      <DependentUpon>Furniture.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputDialog.resx">
       <DependentUpon>InputDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListItem.resx">
+      <DependentUpon>ListItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offers.resx">
+      <DependentUpon>Offers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Probnik.resx">
+      <DependentUpon>Probnik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +174,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistUser.resx">
+      <DependentUpon>RegistUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +223,9 @@
     <Content Include="bin\Debug\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\zvezda2.png" />
+    <None Include="Resources\zvezda1.png" />
+    <None Include="Resources\free-icon-sofa-2146347.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

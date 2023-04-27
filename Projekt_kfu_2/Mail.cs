@@ -14,7 +14,7 @@ namespace Projekt_kfu_2
         public string recipientEmail;
         public string text = "";
         public string status = "";
-        private string Code = "Homeliness";
+        private string Code = "836852";
 
 
 
