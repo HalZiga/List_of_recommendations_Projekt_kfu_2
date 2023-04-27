@@ -33,16 +33,12 @@
             this.sidebar = new System.Windows.Forms.Panel();
             this.Flow = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelButton1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1Menu = new System.Windows.Forms.Button();
             this.panelButton2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button2Menu = new System.Windows.Forms.Button();
             this.panelButton3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3Menu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,19 +47,25 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelforForm = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.Flow.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
             this.panelButton1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelButton2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelButton3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // SidebarTimer
@@ -108,18 +110,6 @@
             this.panel4.Size = new System.Drawing.Size(166, 77);
             this.panel4.TabIndex = 0;
             // 
-            // pictureBoxMenu
-            // 
-            this.pictureBoxMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(73)))), ((int)(((byte)(0)))));
-            this.pictureBoxMenu.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_sofa_2146347;
-            this.pictureBoxMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxMenu.Location = new System.Drawing.Point(0, 9);
-            this.pictureBoxMenu.Name = "pictureBoxMenu";
-            this.pictureBoxMenu.Size = new System.Drawing.Size(34, 52);
-            this.pictureBoxMenu.TabIndex = 2;
-            this.pictureBoxMenu.TabStop = false;
-            this.pictureBoxMenu.Click += new System.EventHandler(this.pictureBoxMenu_Click);
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(73)))), ((int)(((byte)(0)))));
@@ -141,17 +131,6 @@
             this.panelButton1.Name = "panelButton1";
             this.panelButton1.Size = new System.Drawing.Size(166, 48);
             this.panelButton1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(156)))), ((int)(((byte)(66)))));
-            this.pictureBox1.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_sofa_2146347;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 41);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // button1Menu
             // 
@@ -176,17 +155,6 @@
             this.panelButton2.Size = new System.Drawing.Size(166, 48);
             this.panelButton2.TabIndex = 2;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(156)))), ((int)(((byte)(66)))));
-            this.pictureBox3.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_sofa_2146347;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 41);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
             // button2Menu
             // 
             this.button2Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(156)))), ((int)(((byte)(66)))));
@@ -209,17 +177,6 @@
             this.panelButton3.Name = "panelButton3";
             this.panelButton3.Size = new System.Drawing.Size(166, 48);
             this.panelButton3.TabIndex = 2;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(156)))), ((int)(((byte)(66)))));
-            this.pictureBox2.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_sofa_2146347;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 41);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // button3Menu
             // 
@@ -290,6 +247,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.labelforForm);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(164, 80);
@@ -300,11 +258,11 @@
             // labelforForm
             // 
             this.labelforForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.labelforForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelforForm.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelforForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelforForm.Location = new System.Drawing.Point(0, 0);
             this.labelforForm.Name = "labelforForm";
-            this.labelforForm.Size = new System.Drawing.Size(636, 48);
+            this.labelforForm.Size = new System.Drawing.Size(492, 48);
             this.labelforForm.TabIndex = 1;
             this.labelforForm.Text = " ";
             this.labelforForm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -317,6 +275,64 @@
             this.panelDesktopPane.Name = "panelDesktopPane";
             this.panelDesktopPane.Size = new System.Drawing.Size(636, 322);
             this.panelDesktopPane.TabIndex = 6;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_plus_2549959_1;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox4.Image = global::Projekt_kfu_2.Properties.Resources.free_icon_plus_2549959_1;
+            this.pictureBox4.Location = new System.Drawing.Point(580, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(56, 48);
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBoxMenu
+            // 
+            this.pictureBoxMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(73)))), ((int)(((byte)(0)))));
+            this.pictureBoxMenu.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_sofa_2146347;
+            this.pictureBoxMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxMenu.Location = new System.Drawing.Point(0, 9);
+            this.pictureBoxMenu.Name = "pictureBoxMenu";
+            this.pictureBoxMenu.Size = new System.Drawing.Size(34, 52);
+            this.pictureBoxMenu.TabIndex = 2;
+            this.pictureBoxMenu.TabStop = false;
+            this.pictureBoxMenu.Click += new System.EventHandler(this.pictureBoxMenu_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(156)))), ((int)(((byte)(66)))));
+            this.pictureBox1.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_sofa_2146347;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 41);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(156)))), ((int)(((byte)(66)))));
+            this.pictureBox3.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_sofa_2146347;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 41);
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(156)))), ((int)(((byte)(66)))));
+            this.pictureBox2.BackgroundImage = global::Projekt_kfu_2.Properties.Resources.free_icon_sofa_2146347;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 41);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // RegistUser
             // 
@@ -333,16 +349,17 @@
             this.sidebar.ResumeLayout(false);
             this.Flow.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
             this.panelButton1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelButton2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelButton3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +387,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3Menu;
         private System.Windows.Forms.PictureBox pictureBoxMenu;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

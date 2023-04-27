@@ -16,8 +16,8 @@ namespace Projekt_kfu_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegistUser());
-            //Application.Run(new User());
+            //Application.Run(new AddFurn());
+            Application.Run(new AddFurn());
         }
     }
 }

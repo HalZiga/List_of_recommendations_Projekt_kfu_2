@@ -198,21 +198,21 @@
             // предложениеToolStripMenuItem
             // 
             this.предложениеToolStripMenuItem.Name = "предложениеToolStripMenuItem";
-            this.предложениеToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.предложениеToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.предложениеToolStripMenuItem.Text = "Предложения";
             this.предложениеToolStripMenuItem.Click += new System.EventHandler(this.предложениеToolStripMenuItem_Click);
             // 
             // регистрацияToolStripMenuItem
             // 
             this.регистрацияToolStripMenuItem.Name = "регистрацияToolStripMenuItem";
-            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.регистрацияToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.регистрацияToolStripMenuItem.Text = "Регистрация";
             this.регистрацияToolStripMenuItem.Click += new System.EventHandler(this.регистрацияToolStripMenuItem_Click);
             // 
             // оПриложенииToolStripMenuItem
             // 
             this.оПриложенииToolStripMenuItem.Name = "оПриложенииToolStripMenuItem";
-            this.оПриложенииToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.оПриложенииToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.оПриложенииToolStripMenuItem.Text = "О приложении";
             this.оПриложенииToolStripMenuItem.Click += new System.EventHandler(this.оПриложенииToolStripMenuItem_Click_1);
             // 

@@ -10,32 +10,15 @@ namespace Projekt_kfu_2
 {
     public class TouchScroll
     {
-        private Point mouseDownPoint;
-        private FlowLayoutPanel parentPanel;
-        public TouchScroll(FlowLayoutPanel panel)
-        {
-            this.parentPanel = panel;
-            AssignEvent(panel);
-        }
-        private void AssignEvent(Control control)
-        {
-            control.MouseDown += MouseDown;
-            control.MouseMove += MouseMove;
+        public static Dictionary<int,Image> img = new Dictionary<int,Image>();
+        private static int i = 0;
 
-            foreach(Control child in control.Controls) 
-            {
-                AssignEvent(child);
-            }
-        }
-
-        private void MouseMove(object sender, MouseEventArgs e)
+        public static int Addd(Image image)
         {
-            throw new NotImplementedException();
-        }
-
-        private void MouseDown(object sender, MouseEventArgs e)
-        {
-            throw new NotImplementedException();
+            img.Add(i, image);
+            
+            return i;
+            i++;
         }
     }
 }

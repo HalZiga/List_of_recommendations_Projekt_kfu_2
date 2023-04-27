@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Projekt_kfu_2
 {
@@ -42,10 +43,24 @@ namespace Projekt_kfu_2
             SqlCommand command = new SqlCommand($"INSERT INTO [Table] (Name, Surname, LastName, Email, Password, Login) VALUES (N'{name}',N'{surname}',N'{lastName}', '{email}', '{password}', '{login}')", SqlConnection_connection);
             int A = command.ExecuteNonQuery();
             return A;
-
-
         }
 
+        public static int AddFurnitur(string fname, string fdescription,string type,int foto)
+        {
+            SqlCommand command = new SqlCommand($"INSERT INTO [Furniture] (FName, FDescription,Type,Foto) VALUES (N'{fname}',N'{fdescription}', N'{type}', N'{foto}')", SqlConnection_connection);
+            int A = command.ExecuteNonQuery();
+            return A;
+        }
+        public static int AddFurnitur(string fname, string fdescription, string type)
+        {
+            SqlCommand command = new SqlCommand($"INSERT INTO [Furniture] (FName, FDescription,Type) VALUES (N'{fname}', N'{fdescription}', N'{type}')", SqlConnection_connection);
+            int A = command.ExecuteNonQuery();
+            if (A == 1)
+            {
+                MessageBox.Show($"{A}");
+            }
+            return A;
+        }
         public static Boolean UserExist(string login)
         {
             DataTable table = new DataTable();

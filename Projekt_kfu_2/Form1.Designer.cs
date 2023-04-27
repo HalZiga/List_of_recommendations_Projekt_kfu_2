@@ -33,10 +33,10 @@
             this.buttonRegestration = new System.Windows.Forms.Button();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.pictureBoxVisible = new System.Windows.Forms.PictureBox();
             this.pictureBoxHide = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisible)).BeginInit();
+            this.pictureBoxVisible = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisible)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,17 +106,6 @@
             this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
-            // pictureBoxVisible
-            // 
-            this.pictureBoxVisible.Image = global::Projekt_kfu_2.Properties.Resources.icons8_показать_30;
-            this.pictureBoxVisible.Location = new System.Drawing.Point(339, 251);
-            this.pictureBoxVisible.Name = "pictureBoxVisible";
-            this.pictureBoxVisible.Size = new System.Drawing.Size(35, 35);
-            this.pictureBoxVisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxVisible.TabIndex = 7;
-            this.pictureBoxVisible.TabStop = false;
-            this.pictureBoxVisible.Click += new System.EventHandler(this.pictureBoxVisible_Click);
-            // 
             // pictureBoxHide
             // 
             this.pictureBoxHide.Image = global::Projekt_kfu_2.Properties.Resources.icons8_скрыто_30;
@@ -127,6 +116,17 @@
             this.pictureBoxHide.TabIndex = 6;
             this.pictureBoxHide.TabStop = false;
             this.pictureBoxHide.Click += new System.EventHandler(this.pictureBoxHide_Click);
+            // 
+            // pictureBoxVisible
+            // 
+            this.pictureBoxVisible.Image = global::Projekt_kfu_2.Properties.Resources.icons8_показать_30;
+            this.pictureBoxVisible.Location = new System.Drawing.Point(339, 251);
+            this.pictureBoxVisible.Name = "pictureBoxVisible";
+            this.pictureBoxVisible.Size = new System.Drawing.Size(35, 35);
+            this.pictureBoxVisible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVisible.TabIndex = 7;
+            this.pictureBoxVisible.TabStop = false;
+            this.pictureBoxVisible.Click += new System.EventHandler(this.pictureBoxVisible_Click);
             // 
             // Avtorisation
             // 
@@ -146,8 +146,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResizeBegin += new System.EventHandler(this.Avtorisation_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.Avtorisation_ResizeEnd);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisible)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisible)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

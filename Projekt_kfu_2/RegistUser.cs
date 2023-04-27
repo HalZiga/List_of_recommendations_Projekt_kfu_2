@@ -76,5 +76,10 @@ namespace Projekt_kfu_2
         {
             SidebarTimer.Start();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

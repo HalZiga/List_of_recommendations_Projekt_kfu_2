@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFurn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFurn.Designer.cs">
+      <DependentUpon>AddFurn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class_for_db.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -137,6 +143,9 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddFurn.resx">
+      <DependentUpon>AddFurn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +232,7 @@
     <Content Include="bin\Debug\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\free-icon-plus-2549959_1.png" />
     <None Include="Resources\zvezda2.png" />
     <None Include="Resources\zvezda1.png" />
     <None Include="Resources\free-icon-sofa-2146347.png" />
