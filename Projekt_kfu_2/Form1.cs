@@ -119,7 +119,7 @@ namespace Projekt_kfu_2
             regestration.Show();
         }
 
-        private void buttonEntrance_Click(object sender, EventArgs e)
+        public void buttonEntrance_Click(object sender, EventArgs e)
         {
             Class_for_db.Connect();
             Class_for_db.openconnection();
