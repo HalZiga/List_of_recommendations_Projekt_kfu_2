@@ -15,8 +15,21 @@ namespace Projekt_kfu_2
 {
     public partial class Regestration : Form
     {
-    
-        public Regestration()
+        static Regestration regestration = null;
+
+
+        public static Regestration Getinstatnce()
+        {
+            if (regestration == null)
+            {
+                regestration = new Regestration();
+            }
+            return regestration;
+
+        }
+        
+
+        private Regestration()
         {
             InitializeComponent();
         }

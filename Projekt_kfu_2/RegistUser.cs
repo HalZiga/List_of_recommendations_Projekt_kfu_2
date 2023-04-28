@@ -13,9 +13,16 @@ namespace Projekt_kfu_2
 {
     public partial class RegistUser : Form
     {
+        private Form activrForm;
+        private int UsId;
         public RegistUser()
         {
             InitializeComponent();
+        }
+        public RegistUser(int usid)
+        {
+            InitializeComponent();
+            this.UsId = usid;
         }
 
         private void RegistUser_Load(object sender, EventArgs e)
@@ -79,7 +86,30 @@ namespace Projekt_kfu_2
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            var add = new AddFurn(UsId);
+            add.ShowDialog();
+        }
 
+        private void button1Menu_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Offers(), sender);
+            labelforForm.Text = "Предложения";
+        }
+        private void OpenChildForm(Form childform, object btnSender)
+        {
+            if (activrForm != null)
+            {
+                activrForm.Close();
+            }
+            activrForm = childform;
+            childform.TopLevel = false;
+            childform.FormBorderStyle = FormBorderStyle.None;
+            childform.Dock = DockStyle.Fill;
+            this.panelDesktopPane.Controls.Add(childform);
+            this.panelDesktopPane.Tag = childform;
+            childform.BringToFront();
+            childform.Show();
+            //labelforForm.Text = childform.Text;
         }
     }
 }

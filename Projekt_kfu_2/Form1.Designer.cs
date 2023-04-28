@@ -144,8 +144,6 @@
             this.Name = "Avtorisation";
             this.Text = "Avtorisation";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResizeBegin += new System.EventHandler(this.Avtorisation_ResizeBegin);
-            this.ResizeEnd += new System.EventHandler(this.Avtorisation_ResizeEnd);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVisible)).EndInit();
             this.ResumeLayout(false);

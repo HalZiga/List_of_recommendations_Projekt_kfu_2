@@ -72,6 +72,18 @@
       <DependentUpon>AddFurn.cs</DependentUpon>
     </Compile>
     <Compile Include="Class_for_db.cs" />
+    <Compile Include="Comment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comment.Designer.cs">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoComment.Designer.cs">
+      <DependentUpon>DoComment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </Compile>
     <EmbeddedResource Include="AddFurn.resx">
       <DependentUpon>AddFurn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comment.resx">
+      <DependentUpon>Comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoComment.resx">
+      <DependentUpon>DoComment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -232,6 +250,7 @@
     <Content Include="bin\Debug\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\free-icon-furniture-963880.png" />
     <None Include="Resources\free-icon-plus-2549959_1.png" />
     <None Include="Resources\zvezda2.png" />
     <None Include="Resources\zvezda1.png" />

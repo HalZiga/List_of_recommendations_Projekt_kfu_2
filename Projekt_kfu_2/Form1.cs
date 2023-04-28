@@ -13,10 +13,19 @@ namespace Projekt_kfu_2
 {
     public partial class Avtorisation : Form
     {
+        static Avtorisation avtorisation = null;
 
 
-        static Point pointPassword = new Point(0,0); //ебусь с бесполезными координатами переделаю
-        public Avtorisation()
+        public static Avtorisation Getinstatnce()
+        {
+            if (avtorisation == null)
+            {
+                avtorisation = new Avtorisation();
+            }
+            return avtorisation;
+
+        }
+        private Avtorisation()
         {
             InitializeComponent();
             
@@ -26,9 +35,6 @@ namespace Projekt_kfu_2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            User user = new User();
-            user.userr = user;
-            user.Show();
 
             textBoxLogin.Text = "Логин";
             textBoxLogin.ForeColor = Color.Gray;
@@ -42,8 +48,6 @@ namespace Projekt_kfu_2
             int centerY = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
 
             this.Location = new Point(centerX, centerY);
-
-            pointPassword = textBoxPassword.Location;//ебусь с бесполезными координатами переделаю
 
 
         }
@@ -99,23 +103,12 @@ namespace Projekt_kfu_2
             pictureBoxVisible.Visible = false;
         }
 
-        private void Avtorisation_ResizeBegin(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Avtorisation_ResizeEnd(object sender, EventArgs e)
-        {
-            //ебусь с бесполезными координатами переделnm надо или удалить
-            pointPassword.X = (pointPassword.X   + 193);
-            pictureBoxHide.Location = pointPassword;
-            pointPassword.X = textBoxPassword.Location.X;
-        }
 
         private void buttonRegestration_Click(object sender, EventArgs e)
         {
 
-            Regestration regestration = new Regestration();
+            Regestration regestration = Regestration.Getinstatnce();
             regestration.Show();
         }
 
@@ -157,8 +150,9 @@ namespace Projekt_kfu_2
             if (count > 0)
             {
                 this.Hide();
-                //var val = new FormUser(namme, loginUser, emaiil, LastNamee, userr_id, unic_idd);
-                //val.ShowDialog();
+                
+                var val = new RegistUser(userr_id);
+                val.ShowDialog();
             }
             else { MessageBox.Show("Введенные данные неверны"); }
             

@@ -13,12 +13,19 @@ using System.Xml.Linq;
 
 namespace Projekt_kfu_2
 {
+
     public partial class AddFurn : Form
     {
         private bool Exep = false;
+        private int UsId;
         public AddFurn()
         {
             InitializeComponent();
+        }
+        public AddFurn(int usid)
+        {
+            InitializeComponent();
+            this.UsId = usid;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,7 +35,7 @@ namespace Projekt_kfu_2
             if (Exep)
             {
                 int fot = TouchScroll.Addd(pictureBoxAdd.Image);
-                if (Class_for_db.AddFurnitur(textBoxFName.Text,textBoxFDescription.Text, comboBox1.Text, fot) == 1)
+                if (Class_for_db.AddFFurnitur(textBoxFName.Text,textBoxFDescription.Text, comboBox1.Text, fot) == 1)
                 {
 
                 }
@@ -36,7 +43,7 @@ namespace Projekt_kfu_2
             }
             else
             {
-                Class_for_db.AddFurnitur(textBoxFName.Text, textBoxFDescription.Text, comboBox1.Text);
+                Class_for_db.AddFurnitur(textBoxFName.Text, textBoxFDescription.Text, comboBox1.Text, UsId);
             }
             Class_for_db.closeconnection();
 
@@ -52,6 +59,11 @@ namespace Projekt_kfu_2
 
         private void AddFurn_Load(object sender, EventArgs e)
         {
+            int centerX = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
+            int centerY = (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2;
+
+            this.Location = new Point(centerX, centerY);
+
             comboBox1.Text = "Характеристики";
             comboBox1.ForeColor = Color.Gray;
             textBoxFName.Text = "Название";

@@ -45,15 +45,15 @@ namespace Projekt_kfu_2
             return A;
         }
 
-        public static int AddFurnitur(string fname, string fdescription,string type,int foto)
+        public static int AddFFurnitur(string fname, string fdescription,string type,int foto)
         {
             SqlCommand command = new SqlCommand($"INSERT INTO [Furniture] (FName, FDescription,Type,Foto) VALUES (N'{fname}',N'{fdescription}', N'{type}', N'{foto}')", SqlConnection_connection);
             int A = command.ExecuteNonQuery();
             return A;
         }
-        public static int AddFurnitur(string fname, string fdescription, string type)
+        public static int AddFurnitur(string fname, string fdescription, string type, int usid)
         {
-            SqlCommand command = new SqlCommand($"INSERT INTO [Furniture] (FName, FDescription,Type) VALUES (N'{fname}', N'{fdescription}', N'{type}')", SqlConnection_connection);
+            SqlCommand command = new SqlCommand($"INSERT INTO [Furniture] (FName, FDescription,Type, SumMarks, CountMarks, UsId, midMarks) VALUES (N'{fname}', N'{fdescription}', N'{type}', '{0}', '{0}', '{usid}', '{0}')", SqlConnection_connection);
             int A = command.ExecuteNonQuery();
             if (A == 1)
             {
@@ -61,6 +61,8 @@ namespace Projekt_kfu_2
             }
             return A;
         }
+
+
         public static Boolean UserExist(string login)
         {
             DataTable table = new DataTable();

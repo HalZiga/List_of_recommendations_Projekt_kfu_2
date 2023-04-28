@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Projekt_kfu_2
 {
-    
+
     public partial class User : Form
     {
+        public static void hidde()
+        {
+            
+        }
         public User userr = null;
 
         private Form activrForm;
@@ -69,22 +75,6 @@ namespace Projekt_kfu_2
             childform.Show();
             //labelforForm.Text = childform.Text;
         }
-        private void OpenChildForm(Form childform)
-        {
-            if (activrForm != null)
-            {
-                activrForm.Close();
-            }
-            activrForm = childform;
-            childform.TopLevel = false;
-            childform.FormBorderStyle = FormBorderStyle.None;
-            childform.Dock = DockStyle.Fill;
-            this.panelDesktopPane.Controls.Add(childform);
-            this.panelDesktopPane.Tag = childform;
-            childform.BringToFront();
-            childform.Show();
-            //labelforForm.Text = childform.Text;
-        }
 
 
 
@@ -98,14 +88,31 @@ namespace Projekt_kfu_2
 
         private void регистрацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Regestration regestration = new Regestration();
-            regestration.Show();
+            Avtorisation avtorisation = Avtorisation.Getinstatnce();
+            avtorisation.Show();
 
         }
 
 
         private void предложениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Class_for_db.Connect();
+            //Class_for_db.openconnection();
+
+            //DataTable table = new DataTable();
+
+            //var name = new SqlCommand($"select * from [Furniture] order by CustomerID DESC ;", Class_for_db.UserSqlConnection());
+            //var surname = new SqlCommand($"select max(Surname) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+            //var Lastname = new SqlCommand($"select max(LastName) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+            //var email = new SqlCommand($"select max(Email) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+            //var user_id = new SqlCommand($"select max(UserId) from [Table] where Login = '{loginUser}' ;", Class_for_db.UserSqlConnection());
+
+            //var userr_id = (int)user_id.ExecuteScalar();
+            //var namme = (string)name.ExecuteScalar();
+            //var surnamme = (string)surname.ExecuteScalar();
+            //var LastNamee = (string)Lastname.ExecuteScalar();
+            //var emaiil = (string)email.ExecuteScalar();
+
             OpenChildForm(new Offers(), sender);
             labelforForm.Text = "Предложения";
         }

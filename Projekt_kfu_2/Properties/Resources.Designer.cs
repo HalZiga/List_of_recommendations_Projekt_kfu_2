@@ -63,6 +63,16 @@ namespace Projekt_kfu_2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_furniture_963880 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-furniture-963880", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_plus_2549959_1 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-plus-2549959_1", resourceCulture);
